@@ -14,10 +14,27 @@ long long fib(int n) {
   return vec[n];
 }
 
+long long fib_const(int n) {
+  if (n < 2) return n;
+
+  long long a = 0;
+  long long b = 1;
+  long long tmp;
+
+  for (int i = 2; i <= n; ++i) {
+    tmp = b;
+    b = a + b;
+    a = tmp;
+  }
+
+  return b;
+}
+
 int main() {
   int n;
   std::cout << "Enter n: ";
   std::cin >> n;
-  std::cout << fib(n);
+  std::cout << "Vector fib  " << fib(n) << std::endl;
+  std::cout << "Const fib   " << fib_const(n) << std::endl;
   return 0;
 }
