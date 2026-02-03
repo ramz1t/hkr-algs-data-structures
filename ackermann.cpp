@@ -8,8 +8,8 @@ int ack(int i, int j) {
 }
 
 int main() {
-  std::cout << ack(1, 2) << std::endl;
-  std::cout << ack(2, 1) << std::endl;
-  std::cout << ack(2, 2) << std::endl;
+  std::cout << ack(1, 2) << std::endl; // 4
+  std::cout << ack(2, 1) << std::endl; // 4
+  std::cout << ack(2, 2) << std::endl; // 16
   return 0;
 }
