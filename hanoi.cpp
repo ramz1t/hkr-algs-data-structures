@@ -11,6 +11,9 @@ void hanoi(int n, char from, char to, char temp) {
 }
 
 int main() {
-  hanoi(3, 'A', 'C', 'B');
+  std::cout << "Enter n: ";
+  int n;
+  std::cin >> n;
+  hanoi(n, 'A', 'C', 'B');
   return 0;
 }
